@@ -8,9 +8,10 @@ test.describe('<TestPage />', () => {
     const mockTestUser: User = {
       name: 'Jackson',
       age: 30,
-      // toUserString: () => {
-      //   return 'Hello';
-      // },
+      toUserString: () => {
+        return 'Hello';
+      },
+      // if you comment toUserString from User Type it works.
     };
     const component = await mount<HooksConfig>(TestPage, {
       hooksConfig: { store: { user: mockTestUser } },
